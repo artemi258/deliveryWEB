@@ -4618,9 +4618,9 @@ function forms() {
   }();
 
   var message = {
-    spinner: '../icons/loading.gif',
-    ok: '../icons/ok.png',
-    fail: '../icons/error.png'
+    spinner: "./icons/loading.gif",
+    ok: "./icons/ok.png",
+    fail: "./icons/error.png"
   };
 
   var clearInput = function clearInput() {
@@ -4642,7 +4642,7 @@ function forms() {
       //     statusMessage.appendChild(textMessage);
 
       var formData = new FormData(item);
-      postData('../send.', formData).then(function (res) {
+      postData('../send.php', formData).then(function (res) {
         console.log(res);
         statusImg.setAttribute('src', message.ok);
       }).catch(function () {
